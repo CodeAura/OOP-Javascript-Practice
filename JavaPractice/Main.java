@@ -6,6 +6,7 @@ public class Main {
         Magazine magazine = new Magazine(30);
         Gun gun = new Gun("M4A1");
         FireSelect fireselect = new FireSelect("", "", "");
+        Shoot shoot = new Shoot(null);
 
         gun.BulletsInMagazine("M4A1", magazine);
 
@@ -17,5 +18,6 @@ public class Main {
             System.exit(0);
         }
         scanner.close();
+        shoot.ShootTheGun(fireselect, magazine, gun);
     }
 }

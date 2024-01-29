@@ -23,7 +23,6 @@ public class FireSelect {
         return this.SingleShot;
     }
 
-
     public void FireMode(String FullAutomatic, String SemiFire, String SingleShot) {
         Scanner scanner = new Scanner(System.in);
         FullAutomatic = "";
@@ -46,9 +45,11 @@ public class FireSelect {
                 SemiFire = null;
                 SingleShot = fireMode;
             }
-
-            System.out.println("Selected Firemode: " + fireMode);
+            scanner.close();
         }
-        scanner.close();
+
+    }
+    public void getSelectedFireMode(String fireMode) {
+        System.out.println("Selected Firemode" + fireMode);
     }
 }

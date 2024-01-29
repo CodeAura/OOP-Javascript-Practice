@@ -1,6 +1,16 @@
 public class Shoot {
 
-    public void ShootTheGun(FireSelect fireSelect, Magazine magazine) {
+    public FireSelect fireSelect;
+
+    public Shoot(FireSelect fireSelect) {
+        this.fireSelect = fireSelect;
+    }
+
+
+    public void ShootTheGun(FireSelect fireSelect, Magazine magazine, Gun gun) {
+        System.out.println("Selected gun: " + gun.getGunName());
         System.out.println("Bullets: " + magazine.getBullets());
+
+        System.out.println("trrrrrrrrrrrrrrrrrt");
     }
 }
