@@ -4,6 +4,7 @@ public class FireSelect {
     public String FullAutomatic;
     public String SemiFire;
     public String SingleShot;
+    public String fireMode;
 
     public FireSelect(String FullAutomatic, String SemiFire, String SingleShot) {
         this.FullAutomatic = FullAutomatic;
@@ -25,12 +26,12 @@ public class FireSelect {
 
     public void FireMode(String FullAutomatic, String SemiFire, String SingleShot) {
         Scanner scanner = new Scanner(System.in);
-        FullAutomatic = "";
-        SemiFire = "";
-        SingleShot = "";
+        FullAutomatic = null;
+        SemiFire = null;
+        SingleShot = null;
 
         System.out.println("Select a fire mode (Semi, Auto, Single)");
-        String fireMode = scanner.nextLine();
+        String fireMode = scanner.nextLine().toUpperCase();
         if(fireMode.equals("Auto") || fireMode.equals("Semi") || fireMode.equals("Single")) {
             if(fireMode.equals("Auto")) {
                 FullAutomatic = fireMode;
@@ -49,7 +50,8 @@ public class FireSelect {
         }
 
     }
-    public void getSelectedFireMode(String fireMode) {
-        System.out.println("Selected Firemode" + fireMode);
+
+    public String getSelectedMode() {
+        return this.fireMode;
     }
 }
